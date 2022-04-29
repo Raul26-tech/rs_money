@@ -8,10 +8,19 @@ export const Conatiner = styled.div`
 `;
 
 export const Content = styled.div`
-  max-width: 1120px;
+  max-width: 1084px;
   margin: -0.75rem auto;
   margin-bottom: 2rem;
   
+  p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    top: -40px;
+    left: 1%;
+    display: inline-block;
+  }
 
   img {
     margin-bottom: 2rem;
