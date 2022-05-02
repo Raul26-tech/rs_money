@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { api } from "../../services/api";
+import { TransactionsContext } from "../../TransactionsContext";
 import { Container } from "./styles";
 
 export function TransactionTable() {
-  const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const {transactions} = useContext(TransactionsContext)
 
   interface Transaction {
     id: number;
@@ -14,13 +15,7 @@ export function TransactionTable() {
     createAt: string;
   }
 
-  useEffect(() => {
-    api
-      .get("transactions")
-      .then((response) => setTransactions(response.data.transactions));
-  }, []);
-
-  return (
+  return ( 
     <>
       <Container>
         <div className="resposivity">

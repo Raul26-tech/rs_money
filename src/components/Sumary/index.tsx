@@ -1,10 +1,15 @@
-import { Container } from "./styles";
-
 import iconArrow from "../../assets/iconArrow.png";
 import iconArrowDown from '../../assets/iconArrowDown.png'
 import iconDollar from '../../assets/dollar.png'
 
+import { Container } from "./styles";
+import { useContext } from "react";
+import { TransactionsContext } from "../../TransactionsContext";
+
+
 export function Sumary() {
+  const {transactions} = useContext(TransactionsContext)
+
   return (
     <>
       <Container>
